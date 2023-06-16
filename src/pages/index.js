@@ -8,6 +8,8 @@ import Portfolio from "../components/Portfolio/Portfolio";
 import Work from "../components/Work/Work";
 import { Helmet } from "react-helmet";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from "next/head";
+import logo from "/public/гг.png";
 export default function Home() {
   const scrollToComponent = (id) => {
     const targetComponent = document.getElementById(id);
@@ -15,6 +17,10 @@ export default function Home() {
   };
   return (
     <div>
+      <Head>
+        <title>Uni Agency</title>
+        <link rel="icon" href={logo.src} type="image/png" sizes="16x16" />
+      </Head>
       <Helmet>
         <script>
           {`!function(f,b,e,v,n,t,s)
@@ -51,6 +57,7 @@ export default function Home() {
     </div>
   );
 }
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
