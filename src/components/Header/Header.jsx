@@ -54,16 +54,16 @@ const Header = ({ scrollToComponent }) => {
         </div>
         <Menu anchorEl={anchorEl} keepMounted open={menu} onClose={handleClose}>
           {data.map((d) => (
-            <MenuItem key={d.name} onClick={() => setMenu(false)}>
-              <Link href={router.pathname} locale={d.name}>
+            <Link href={router.pathname} locale={d.name} key={d.name}>
+              <MenuItem onClick={() => setMenu(false)}>
                 <Image
                   className="flag menuFlag"
                   src={d.img}
                   alt=""
                   loading="lazy"
                 />
-              </Link>
-            </MenuItem>
+              </MenuItem>
+            </Link>
           ))}
         </Menu>
         <Menuu className="header_menu_icon" onClick={() => setDrawer(true)} />
