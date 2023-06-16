@@ -1,0 +1,118 @@
+.footer_div{
+    background-color: #010101;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    img{
+        filter: brightness(1) invert(1);
+        width: 220px;
+        cursor: pointer;
+    }
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        p{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .socials{
+        display: flex;
+        gap: 40px;
+        svg{
+            font-size: 44px;
+            cursor: pointer;
+        }
+        img{
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+        }
+        a{
+            color: white;
+            transition: all 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px){
+    .footer_div{
+        padding: 60px 5%;
+    }
+}
+@media screen and (max-width:800px){
+    .footer_div{
+        padding: 45px 30px;
+        img{
+            width: 150px;
+        }
+        .contacts{
+            gap: 5px;
+            p{
+                font-size: 18px;
+                line-height: 20px;
+                padding-bottom: 5px;
+            }
+            a{
+                font-size: 16px;
+            }
+        }
+        .socials{
+            gap: 10px;
+            svg{
+                font-size: 34px;
+            }
+            img{
+                width: 34px;
+                height: 34px;
+            }
+            
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .footer_div{
+        padding: 30px 10px;
+        img{
+            width: 120px;
+        }
+        .contacts{
+            gap: 5px;
+            p{
+                font-size: 16px;
+                line-height: 20px;
+                padding-bottom: 5px;
+            }
+            a{
+                font-size: 14px;
+            }
+        }
+        .socials{
+            gap: 10px;
+            svg{
+                font-size: 24px;
+            }
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.header_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+.header_links{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+.header_translation{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    div{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+    .header_menu_icon{
+        display: none;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+.arrow{
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease all;
+}
+.open_menu{
+    transition: all 0.3s ease all;
+    transform: rotate(180deg);
+}
+.flag{
+    width: 47px;
+    height: 47px;
+    object-fit: contain;
+}
+.header_drawer{
+    padding: 30px 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    max-width: 100%;
+
+    .drawer_title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            width: 128px;
+        }
+        svg{
+            font-size: 30px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+    }
+    .header_drawer_links{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        button{
+            text-align: left;
+            border: none;
+            background-color: transparent;
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px;
+        }
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .header_div{
+        padding: 20px 5%;
+    }
+}
+@media screen and (max-width:1000px) {
+    .header_div{
+        padding: 20px 5%;
+    }
+    .header_links{
+        gap: 40px;
+    }
+}
+@media screen and (max-width:800px) {
+    .header_div{
+        padding: 20px 5%;
+        .logo{
+            width: 140px;
+        }
+    }
+    .header_links{
+        gap: 20px;
+    }
+}
+@media screen and (max-width:650px) {
+    .header_div{
+        padding: 20px;
+        .logo{
+            width: 128px;
+        }
+    }
+    .header_links{
+        display: none;
+    }
+    .header_translation{
+        .header_menu_icon{
+            display: flex;
+        }
+    } 
+    .flag{
+        width: 30px;
+        height: 30px;
+    }
+    .arrow{
+        width: 13px;
+        height: 13px;
+    }
+}

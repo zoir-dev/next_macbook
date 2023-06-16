@@ -1,0 +1,190 @@
+.get_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+    .absolute1{
+        position: absolute;
+        left: 0;
+        top: -70%;
+    }
+    .absolute2{
+        position: absolute;
+        right: 0;
+        top: -20%;
+    }
+    .absolute3{
+        position: absolute;
+        left: 0;
+        bottom: -40%;
+    }
+   .gets {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: center;
+        width: 100%;
+        gap: 80px;
+
+        .get {
+            grid-area: auto;
+            display: flex;
+            align-items: flex-end;
+            gap: -20px;
+            width: 100%;
+
+            p {
+                width: 65%;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
+                margin-left: 10px;
+                margin-bottom: -30px;
+                height: 3rem;
+            }
+
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
+
+        // Additional SCSS to center the items on the second line
+            .get:nth-child(4),
+            .get:nth-child(5) {
+                // justify-content: right;
+                margin-left: 75%;
+                margin-top: 40px;
+            }
+        }
+
+        
+    
+
+
+        .infinite_div {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #28BF04;
+            position: relative;
+            animation: larger 1s infinite;
+               &::after {
+                content: '';
+                position: absolute;
+                opacity: 1;
+                width: 44px;
+                height: 44px;
+                border: 1px solid #28BF04;
+                z-index: -1;
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+            }
+           
+            &::before {
+                content: '';
+                position: absolute;
+                opacity: 1;
+                width: 43px;
+                height: 43px;
+                border: 1px solid #28BF04;
+                z-index: -2;
+                border-radius: 50%;
+                animation: pulse 2s infinite 1s;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+            }
+            &::before::before {
+                content: '';
+                position: absolute;
+                opacity: 1;
+                width: 43px;
+                height: 43px;
+                border: 1px solid #28BF04;
+                z-index: -2;
+                border-radius: 50%;
+                animation: pulse 2s infinite 0.5s;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+            }
+        }
+}
+
+@media screen and (max-width:1900px){
+        .get_div {
+            img{
+                width: 10%;
+            }
+            .gets .get p{
+                max-width: 100%;
+            }
+        }
+
+}
+@media screen and (max-width:1400px){
+        .get_div {
+            .absolute1{
+                top: -15%;
+            }
+            .absolute3{
+                bottom: 0;
+            }
+
+            .gets{
+                grid-template-columns: repeat(2,minmax(0,1fr));
+                .get:nth-child(4){
+                    margin: 0;
+               }
+            }
+        }
+}
+@media screen and (max-width:1000px){
+        .get_div {
+            img{
+                width: 15%;
+            }
+            .absolute2{
+                top: 0;
+            }
+            .gets{
+                gap: 50px;
+            }
+        }
+}
+@media screen and (max-width:800px){
+        .get_div {
+            .absolute3{
+                bottom: 35%;
+            }
+            gap: 80px;
+            padding-top: 100px;
+            .gets{
+                display: flex;
+                flex-direction: column;
+                margin-left: 10%;
+                 .get:nth-child(5){
+                    margin: 0;
+                }
+            }
+        }
+}
+@media screen and (max-width:500px){
+        .get_div {
+            gap: 40px;
+            .gets{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                padding-left: 10px;
+                margin-left: 0;
+                .get:last-child{
+                    p{
+                        margin-bottom: -40px;
+                    }
+                    margin-bottom: 40px;
+                }
+            }
+        }
+}
