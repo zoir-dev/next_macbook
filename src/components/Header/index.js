@@ -1,10 +1,10 @@
-import uzb from "../../assets/uzb.png";
+import uz from "../../assets/uzb.png";
 import en from "../../assets/eng.png";
 import ru from "../../assets/ru.png";
 export const data = [
   {
-    img: uzb,
-    name: "uzb",
+    img: uz,
+    name: "uz",
   },
   {
     img: en,
