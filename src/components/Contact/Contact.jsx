@@ -31,7 +31,7 @@ const Contact = () => {
         `https://api.telegram.org/bot6129287522:AAHm4TVx9XtEzCTJ4lku9WQW8AbfMe3bYTc/sendMessage`,
         {
           params: {
-            chat_id: "781581278",
+            chat_id: "448509829",
             text: `
           Yangi Mijoz:
           Ismi: ${name}

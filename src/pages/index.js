@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="icon" href={logo.src} type="image/png" sizes="16x16" />
       </Head>
       <Helmet>
-        <script>
+        {/* <script>
           {`!function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -43,7 +43,7 @@ export default function Home() {
             src="https://www.facebook.com/tr?id=1671267156652146&ev=PageView&noscript=1"
           /
           >`}
-        </noscript>
+        </noscript> */}
       </Helmet>
       <Header scrollToComponent={scrollToComponent} />
       <div className="main_div">
