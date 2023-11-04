@@ -21,7 +21,7 @@ const Footer = () => {
         <a href="https://www.instagram.com/uniagency.uz/">
           <Instagram />
         </a>
-        <a href="https://www.youtube.com/channel/UCpKe3MvpUghkvKn44Ke1suw">
+        <a href="">
           <Image src={utube} className="footer_icon" alt="" loading="lazy" />
         </a>
       </div>
