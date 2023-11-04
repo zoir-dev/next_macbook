@@ -1,4 +1,4 @@
-import { Head, Html } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 
 const Document = () => {
@@ -23,6 +23,10 @@ const Document = () => {
           />
         </noscript>
       </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
     </Html>
   );
 };
