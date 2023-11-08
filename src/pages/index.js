@@ -34,12 +34,11 @@ export default function Home() {
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
             (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-            ym(86849414, "init", {
+            ym(95384978, "init", {
                   clickmap:true,
                   trackLinks:true,
                   accurateTrackBounce:true,
-                  webvisor:true,
-                  ecommerce:"dataLayer"
+                  webvisor:true
             });
                 `,
           }}
@@ -47,7 +46,7 @@ export default function Home() {
         <noscript>
           <div>
             <img
-              src="https://mc.yandex.ru/watch/86849414"
+              src="https://mc.yandex.ru/watch/95384978"
               style={{ position: "absolute", left: "-9999px" }}
               alt=""
             />
