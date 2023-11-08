@@ -20,11 +20,14 @@ export default function Home() {
   };
   return (
     <div>
-      <script
-        type="text/javascript"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <Head>
+        <title>{metadata.title}</title>
+        <link rel="icon" href={metadata.image} type="image/png" sizes="16x16" />
+        <script
+          type="text/javascript"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -37,23 +40,23 @@ export default function Home() {
                   accurateTrackBounce:true
             });
                 `,
-        }}
-      />
-      <noscript>
-        <div>
-          <img
-            src="https://mc.yandex.ru/watch/86849414"
-            style="position:absolute; left:-9999px;"
-            alt=""
-          />
-        </div>
-      </noscript>
+          }}
+        />
+        <noscript>
+          <div>
+            <img
+              src="https://mc.yandex.ru/watch/86849414"
+              style={{ position: "absolute", left: "-9999px;" }}
+              alt=""
+            />
+          </div>
+        </noscript>
 
-      <script
-        type="text/javascript"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          type="text/javascript"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -65,20 +68,17 @@ export default function Home() {
             fbq('init', '727650709182274');
             fbq('track', 'PageView');
             `,
-        }}
-      />
-
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style="display:none"
-          src="https://www.facebook.com/tr?id=727650709182274&ev=PageView&noscript=1"
+          }}
         />
-      </noscript>
-      <Head>
-        <title>{metadata.title}</title>
-        <link rel="icon" href={metadata.image} type="image/png" sizes="16x16" />
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=727650709182274&ev=PageView&noscript=1"
+          />
+        </noscript>
       </Head>
       <Header scrollToComponent={scrollToComponent} />
       <div className="main_div">
