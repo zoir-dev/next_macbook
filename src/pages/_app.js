@@ -2,14 +2,16 @@ import "@/styles/globals.css";
 import "@/styles/app.scss";
 import { appWithTranslation } from "next-i18next";
 import Script from "next/script";
+import Head from "next/head";
 
 const MyApp = ({ Component, pageProps }) => {
   <>
-    <Script
-      id="yd-pixel"
-      strategy="lazyOnload"
-      dangerouslySetInnerHTML={{
-        __html: `
+    <Head>
+      <script
+        type="text/javascript"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `
             (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
             m[i].l=1*new Date();
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -22,15 +24,25 @@ const MyApp = ({ Component, pageProps }) => {
                   accurateTrackBounce:true,
                   webvisor:true,
                   ecommerce:"dataLayer"
-            });
-        `,
-      }}
-    />
-    <Script
-      id="fb-pixel"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
+                });
+                `,
+        }}
+      />
+      <noscript>
+        <div>
+          <img
+            src="https://mc.yandex.ru/watch/86849414"
+            style="position:absolute; left:-9999px;"
+            alt=""
+          />
+        </div>
+      </noscript>
+
+      <script
+        type="text/javascript"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -42,8 +54,18 @@ const MyApp = ({ Component, pageProps }) => {
             fbq('init', '727650709182274');
             fbq('track', 'PageView');
             `,
-      }}
-    />
+        }}
+      />
+
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style="display:none"
+          src="https://www.facebook.com/tr?id=727650709182274&ev=PageView&noscript=1"
+        />
+      </noscript>
+    </Head>
     <Component {...pageProps} />;
   </>;
 };
