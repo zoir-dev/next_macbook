@@ -51,7 +51,7 @@ export default function Home() {
           <div>
             <img
               src="https://mc.yandex.ru/watch/95584241"
-              style="position:absolute; left:-9999px;"
+              style={{ position: "absolute", left: "-9999px" }}
               alt=""
             />
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
           <img
             height="1"
             width="1"
-            style="display:none"
+            style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=714526703545738&ev=PageView&noscript=1"
           />
         </noscript>
